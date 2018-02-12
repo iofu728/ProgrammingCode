@@ -5,13 +5,17 @@
 #### The idea of the problem is in my blog: [wyydsb.xin][1]
 -----
 >#### Recent article:
->###### 1.[PAT A 1018：Public Bike Management.][2]  Dijkstra + DFS
+>###### ★★★★:
+>###### 1.[PAT A 1018：Public Bike Management (30).][2]  Dijkstra + DFS
 >###### 2.[银行排队问题][3]
->###### 3.[PAT A 1017: Queueing at Bank.][4]        银行排队，模拟
->###### 4.[PAT A 1014: Waiting in Line.][5]         银行排队，模拟，sort,queue
->###### 5.[PAT A 1015: Reversible Primes.][6]       素数，进制转换
->###### 6.[PAT A 1022: Digital Library.][7]         map,引用传参&
-
+>###### 3.[PAT A 1014: Waiting in Line (30).][5]         银行排队，模拟，sort,queue
+>###### ★★★☆:
+>###### 4.[PAT A 1021: Deepest Root (25).][8]            无环判断,树的深度,最深源点
+>###### ☆☆☆:
+>###### 5.[PAT A 1017: Queueing at Bank (25).][4]        银行排队，模拟
+>###### 6.[PAT A 1022: Digital Library (30).][7]         map,引用传参&
+>###### ☆:
+>###### 7.[PAT A 1015: Reversible Primes (20).][6]       素数，进制转换
 -----
 ###### updated 2/12/2018
 
@@ -25,4 +29,4 @@
 [5]: http://wyydsb.xin/2018/02/10/1014/  "PAT A 1014: Waiting in Line (30)"
 [6]: http://wyydsb.xin/2018/02/10/1015/  "PAT A 1015:  Reversible Primes (20)"
 [7]:http://wyydsb.xin/2018/02/09/1022/  "PAT A 1022: Digital Library (30)"
-
+[8]: http://wyydsb.xin/2018/02/12/1021/  "PAT A 1021: Deepest Root (25)"

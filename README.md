@@ -1,10 +1,11 @@
 ## PAT A by iofu728 
 
-##### This are some solutions for _PAT A by iofu728.
+##### This are some solutions for PAT A by iofu728.
 
 ##### The idea of the problem is in my blog: [wyydsb.xin][1]
 -----
-#### Recent article：
+#### Recent article
+:
 ###### 1.[PAT A 1018：Public Bike Management.][2]  Dijkstra + DFS
 ###### 2.[银行排队问题][3]
 ###### 3.[PAT A 1017: Queueing at Bank.][4]        银行排队，模拟

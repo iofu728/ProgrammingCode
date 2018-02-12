@@ -1,6 +1,6 @@
 ## PAT A by iofu728 
 
-##### This are some solutions for **PAT A by iofu728.
+##### This are some solutions for _PAT A by iofu728.
 
 ##### The idea of the problem is in my blog: [wyydsb.xin][1]
 -----

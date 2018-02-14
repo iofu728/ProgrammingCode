@@ -56,6 +56,14 @@ void margin(node temp){
 	if(!flag) m.push_back(temp);
 
 }
+bool lowprice(node temp){
+	for(int i=1;i<v.size();++i){
+		if(v[i-1].start<temp.start&&v[i].start>temp.start&&v[i-1].price>temp.price){
+			return true;
+		}
+	}
+	return false;
+}
 bool havein(node temp){
 	for(int i=0;i<m.size();++i){
 		if(m[i].start<=temp.start&&m[i].end>=temp.end){
@@ -78,6 +86,10 @@ int main(int argc, char const *argv[])
 		o.push_back(temp);
 	}
 	sort(o.begin(),o.end(),cmpoilstart);
+	if(o[0].dis){
+		cout<<"The maximum travel distance = 0\n";
+		return 0;
+	}
 	node first;
 	first.start=0,first.end=ability,first.price=o[0].price;
 	v.push_back(first);	
@@ -94,16 +106,18 @@ int main(int argc, char const *argv[])
 		int tempend=temp.start+ability;
 		temp.end=(tempend>d)?(d):tempend;
 		++p;
-		cout<<temp.start<<" "<<temp.end<<" "<<temp.price<<" "<<canreach()<<" "<<p<<" "<<v.size()<<" "<<m.size()<<endl; 
+//		cout<<temp.start<<" "<<temp.end<<" "<<temp.price<<" "<<canreach()<<" "<<p<<" "<<v.size()<<" "<<m.size()<<endl; 
 		if(havein(temp)){
 			v.push_back(temp);
 			margin(temp);
-		for(int i=0;i<m.size();++i){
-			cout<<m[i].start<<" "<<m[i].end<<endl;
-		}
-		for(int i=0;i<v.size();++i){
-			cout<<v[i].start<<" "<<v[i].end<<" "<<v[i].price<<endl;
-		}			
+//		for(int i=0;i<m.size();++i){
+//			cout<<'m'<<m[i].start<<" "<<m[i].end<<endl;
+//		}
+//		for(int i=0;i<v.size();++i){
+//			cout<<'v'<<v[i].start<<" "<<v[i].end<<" "<<v[i].price<<endl;
+//		}			
+		}else if(lowprice(temp)){
+			v.push_back(temp);
 		}
 	}
 
@@ -111,12 +125,32 @@ int main(int argc, char const *argv[])
 
 		cout<<"The maximum travel distance = "<<m[0].end<<endl;
 	}else{
+		int more=0,tempstart;
 		double spend=0.0;
-		for(int i=1;i<v.size()-1;++i){
-			spend+=(v[i].start-v[i-1].start)*v[i].price*1.0/davg;
+		sort(v.begin(),v.end(),cmpdis);
+		for(int i=1;i<v.size();++i){
+			tempstart=v[i].start-v[i-1].start;
+			if(v[i].price<=v[i-1].price){
+				if(more<tempstart){
+					spend+=(tempstart-more)*v[i-1].price*1.0;
+					more=0;
+				}else{
+					more-=tempstart;
+				}
+				
+			}else{
+				if(more>=600){
+					more-=600;
+				}else{
+					spend+=(600-more)*v[i-1].price*1.0;
+					more=600-tempstart;
+				}
+			}
+//			cout<<v[i].start<<" "<<v[i-1].start<<" "<<spend<<endl;
 		}
-		spend+=(d-v[v.size()-1].start)*1.0*v[v.size()-1].price/davg;
-		printf("%.2f\n",spend);
+
+		spend+=(d-v[v.size()-1].start-more)*1.0*v[v.size()-1].price;
+		printf("%.2f\n",spend/davg);
 	}	
 
 	return 0;

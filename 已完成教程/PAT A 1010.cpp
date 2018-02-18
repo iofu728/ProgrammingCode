@@ -1,37 +1,90 @@
-#include <cstdio>  
+#include<cstdio>
+#include<cstring>
 #include<algorithm>
 using namespace std;
+
 int main(){
-	char max[3]={'W','T','L'};
-	double maxa=0,maxb=0,maxc=0;
-	int a,b,c;
-	double A[3],B[3],C[3];
-
-
-	scanf("%lf %lf %lf",&A[0],&A[1],&A[2]);
-	scanf("%lf %lf %lf",&B[0],&B[1],&B[2]);	
-	scanf("%lf %lf %lf",&C[0],&C[1],&C[2]);
-
-
-	for(int i=0;i<3;i++){
-		if(A[i]>maxa){
-			maxa=A[i];
-			a=i;
+	char a[10],b[10];
+	int tag,radix,x=0,temp;
+	int c[36][10],d[10];
+	bool vis[36]={true},dan=false;
+	scanf("%s %s",a,b);
+	scanf("%d %d",&tag,&radix);
+	if(tag==2)
+	swap(a,b);
+	//printf(" %d ",strlen(b));
+	
+	for(int i=0;i<strlen(a);i++){
+		if(a[i]<='9'&&a[i]>='0'){
+		x=x*radix+a[i]-'0';
 		}
-		if(B[i]>maxb){
-			maxb=B[i];
-			b=i;
-		}
-		if(C[i]>maxc){
-			maxc=C[i];
-			c=i;
-		}				
+		if(a[i]<='z'&&a[i]>='a'){
+		x=x*radix+a[i]-'a'+10;
+		}			
+		
 	}
-	sort(A,A+3);
-	sort(B,B+3);
-	sort(C,C+3);
-	printf("%c %c %c ",max[a],max[b],max[c]);	
-	printf("%.2lf",(A[2]*B[2]*C[2]*0.65-1)*2);
+	//printf("%d ",x);
+	for(int i=0;i<strlen(b);i++){
+		if(b[i]<='9'&&b[i]>='0'){
+		d[i]=b[i]-'0';
+		}
+		if(b[i]<='z'&&b[i]>='a'){
+		d[i]=b[i]+10-'a';
+		}			
+		
+	}
 
+
+	for(int i=2;i<36;i++){
+		vis[i]=true;
+		temp=x;
+		int j=0;
+		while(temp){
+			c[i][j]=temp%i;
+			temp=temp/i;
+			//if(c[i][j]==d[strlen(b)-j-1]){
+			//	printf("YES");
+			//}
+			//else printf("NO");
+			//printf("%d ",c[i][j]);
+			//printf("%d ",d[strlen(b)-j-1]);
+			if(c[i][j]==d[strlen(b)-j-1]);
+			else{
+				vis[i]=false;
+				break;
+			}
+			if(vis[i]==false) break;
+			j++;
+		}
+
+		if(vis[i]==true){
+			
+			dan=true;
+			
+		}
+		
+	}
+	
+	if(vis[10]==true){
+		printf("10");
+	}
+	else if(vis[2]==true){
+		printf("2");
+	}
+	else if(vis[16]==true){
+		printf("16");
+	}
+	else if(dan==true){
+		for(int i=3;i<36;i++){
+			if(vis[i]==true){
+				printf("%d",i);
+				goto mp;
+			}
+		}
+	}
+	else
+	printf("Impossible");
+	mp:
 	return 0;
+		
 }

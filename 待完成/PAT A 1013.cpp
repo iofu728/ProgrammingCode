@@ -1,55 +1,43 @@
 #include<cstdio>
+#include<vector>
+#include<cstring>
+using namespace std;
 
-const int maxn=1010;
-int G[maxn][maxn];
-bool test[maxn][maxn]={false};
-int n,m,k;
-bool memeoy;
-int search(int x){
-	fill(test,test+maxn*maxn,flase);
-	memeoy=true;
-	int start=0;
-	if(x==1){
-		start=2;
-	}
-	for(int i=star;i<n&&i!=x;i++){
-		for(int j=i+1;j<n&&j!=x&&j!=i;j++){
-			if(G[i][j]==1){
-				test[i][j]=true;
-			}
-			for(int k=1;k<i;i++){
-				if(test[k][i]==true){
-					test[k][j]=true;
-				}
-			}
+const int maxn=1111;
+
+vector<int> G[maxn];
+bool vis[maxn];
+int currentpoint;
+
+void dfs(int v){
+	if(v==currentpoint) return;
+	vis[v]=true;
+	for(int i=0;i<G[v].size();i++){
+		if(vis[G[v][i]]==false){
+			dfs(G[v][i]);
 		}
 	}
-	for()
-	for(int i=star;i<n&&i!=x;i++){
-		for(int j=i+1;j<n&&j!=x;j++){
-			if(test[i][j]==false){
-				memeoy=false;
-			}
-		}
-	}
-	if(memeory==true) return 0;
-	else return 
-	
-	
 }
+int n,m,k;
 int main(){
-	fill(G,G+maxn*maxn,0);
 	scanf("%d %d %d",&n,&m,&k);
-	int u,v;
-	int goal[k];
 	for(int i=0;i<m;i++){
-		scanf("%d %d",&u,&v);
-		G[u][v]=1;
-		G[v][u]=1;
+		int a,b;
+		scanf("%d %d",&a,&b);
+		G[a].push_back(b);
+		G[b].push_back(a);
 	}
-	for(int i=0;i<k;i++){
-		scanf("%d",&goal[i]);
+	for(int j=0;j<k;j++){
+		scanf("%d",&currentpoint);
+		memset(vis,false,sizeof(vis));
+		int block=0;
+		for(int i=1;i<=n;i++){
+			if(i!=currentpoint&&vis[i]==false){
+				dfs(i);
+				block++;
+			}
+		}
+		printf("%d\n",block-1);
 	}
-	
-	
-} 
+	return 0;
+}

@@ -1,16 +1,15 @@
-#include<cstdio>
-#include<cstdlib> 
-
+#include<iostream>
+using namespace std;
 int main(){
-	int a,b,c;
-	scanf("%d %d",&a,&b);
-	c=a+b;
-	if(c<1000&&c>-1000){
-		printf("%d",c);
+	int n,m;
+	cin>>n>>m;
+	getchar();
+	string atr=to_string(a+b);
+	int len=str.size();
+	for(int i=0;i<len;++i){
+		cout<<str[i];
+		if(s[i]=='-')continue;
+		if((i+1)%3==len%3&&i!=len-1) cout<<",";
 	}
-	else if(c>1000000||c<-1000000){
-		printf("%d,%03d,%03d",c/1000000,abs((c%1000000)/1000),abs((c%1000000)%1000)); 
-	}
-	else printf("%d,%03d",c/1000,abs(c%1000));
-	return 0; 
+	return 0;
 }

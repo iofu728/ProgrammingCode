@@ -3,6 +3,7 @@
 #### This are some solutions for `PAT A by iofu728`.
 
 #### The idea of the problem is in my blog: [wyydsb.xin][1]
+#### 43/51/135
 -----
 >#### Recent article:
 >### ★★★★☆:

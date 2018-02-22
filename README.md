@@ -3,7 +3,7 @@
 #### This are some solutions for `PAT A by iofu728`.
 
 #### The idea of the problem is in my blog: [wyydsb.xin][1]
-#### completion：43/51/135
+#### completion：47/55/135
 -----
 >#### Recent article:
 >### ★★★★☆:
@@ -16,6 +16,7 @@
 >### ★★★☆:
 >###### 6.[PAT A 1021: Deepest Root (25).][8] 无环判断,树的深度,最深源点
 >### ☆☆☆:
+>###### 7.[PAT A 1044: Shopping in Mars (25)][14] dp
 >###### 7.[PAT A 1040: Longest Symmetric String (25)][13] 动态规划dp
 >###### 8.[PAT A 1034: Head of a Gang (30)][11] DFS,map
 >###### 9.[PAT A 1017: Queueing at Bank (25).][4] 排队，模拟
@@ -25,7 +26,7 @@
 >### ☆:
 >###### 12.[PAT A 1015: Reversible Primes (20).][6] 素数，进制转换
 -----
-###### updated 2/21/2018
+###### updated 2/22/2018
 
 
 
@@ -43,4 +44,4 @@
 [11]: http://wyydsb.xin/2018/02/15/1034/ "PAT A 1034: Head of a Gang (30) ☆☆☆"
 [12]:http://wyydsb.xin/2018/02/17/1038/  "PAT A 1038: Recover the Smallest Number (30)☆☆★"
 [13]:http://wyydsb.xin/2018/02/18/1040/  "PAT A 1040: Longest Symmetric String (25)☆☆☆"
-
+[14]:http://wyydsb.xin/2018/02/22/1044/  "PAT A 1044: Shopping in Mars (25)☆☆☆"

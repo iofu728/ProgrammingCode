@@ -17,14 +17,14 @@
 >###### 6.[PAT A 1021: Deepest Root (25).][8] 无环判断,树的深度,最深源点
 >### ☆☆☆:
 >###### 7.[PAT A 1044: Shopping in Mars (25)][14] dp
->###### 7.[PAT A 1040: Longest Symmetric String (25)][13] 动态规划dp
->###### 8.[PAT A 1034: Head of a Gang (30)][11] DFS,map
->###### 9.[PAT A 1017: Queueing at Bank (25).][4] 排队，模拟
->###### 10.[PAT A 1022: Digital Library (30).][7] map,引用传参&
+>###### 8.[PAT A 1040: Longest Symmetric String (25)][13] 动态规划dp
+>###### 9.[PAT A 1034: Head of a Gang (30)][11] DFS,map
+>###### 10.[PAT A 1017: Queueing at Bank (25).][4] 排队，模拟
+>###### 11.[PAT A 1022: Digital Library (30).][7] map,引用传参&
 >### ☆★:
->###### 11.[PAT A 1038: Recover the Smallest Number (30)][12]字符串
+>###### 12.[PAT A 1038: Recover the Smallest Number (30)][12]字符串
 >### ☆:
->###### 12.[PAT A 1015: Reversible Primes (20).][6] 素数，进制转换
+>###### 13.[PAT A 1015: Reversible Primes (20).][6] 素数，进制转换
 -----
 ###### updated 2/22/2018
 

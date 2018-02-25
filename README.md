@@ -3,7 +3,7 @@
 #### This are some solutions for `PAT A by iofu728`.
 
 #### The idea of the problem is in my blog: [wyydsb.xin][1]
-#### completion：56/63/135
+#### completion：60/67/135
 -----
 >#### Recent article:
 >### ★★★★☆:
@@ -14,22 +14,23 @@
 >###### 4.[排队模拟问题][3]
 >###### 5.[PAT A 1014: Waiting in Line (30).][5] 排队，模拟，sort,queue
 >### ★★★☆:
->###### 6.[PAT A 1021: Deepest Root (25).][8] 无环判断,树的深度,最深源点
+>###### 6.[PAT A 1057: Stack (30)][17] 二分查找，二维哈希，栈模拟
+>###### 7.[PAT A 1021: Deepest Root (25).][8] 无环判断,树的深度,最深源点
 >### ☆☆★:
->###### 7.[PAT A 1056: Mice and Rice (25)][16] 模拟，晋级赛
->###### 8.[PAT A 1049: Counting Ones (30)][15] 递归，数学问题
+>###### 8.[PAT A 1056: Mice and Rice (25)][16] 模拟，晋级赛
+>###### 9.[PAT A 1049: Counting Ones (30)][15] 递归，数学问题
 >### ☆☆☆:
->###### 9.[PAT A 1044: Shopping in Mars (25)][14] dp
->###### 10.[PAT A 1040: Longest Symmetric String (25)][13] 动态规划dp
->###### 11.[PAT A 1034: Head of a Gang (30)][11] DFS,map
->###### 12.[PAT A 1017: Queueing at Bank (25).][4] 排队，模拟
->###### 13.[PAT A 1022: Digital Library (30).][7] map,引用传参&
+>###### 10.[PAT A 1044: Shopping in Mars (25)][14] dp
+>###### 11.[PAT A 1040: Longest Symmetric String (25)][13] 动态规划dp
+>###### 12.[PAT A 1034: Head of a Gang (30)][11] DFS,map
+>###### 13.[PAT A 1017: Queueing at Bank (25).][4] 排队，模拟
+>###### 14.[PAT A 1022: Digital Library (30).][7] map,引用传参&
 >### ☆★:
->###### 14.[PAT A 1038: Recover the Smallest Number (30)][12]字符串
+>###### 15.[PAT A 1038: Recover the Smallest Number (30)][12]字符串
 >### ☆:
->###### 15.[PAT A 1015: Reversible Primes (20).][6] 素数，进制转换
+>###### 16.[PAT A 1015: Reversible Primes (20).][6] 素数，进制转换
 -----
-###### updated 2/24/2018
+###### updated 2/25/2018
 
 
 
@@ -50,3 +51,4 @@
 [14]:http://wyydsb.xin/2018/02/22/1044/  "PAT A 1044: Shopping in Mars (25)☆☆☆"
 [15]:http://wyydsb.xin/2018/02/23/1049/  "PAT A 1049: Counting Ones (30)☆☆★"
 [16]:http://wyydsb.xin/2018/02/24/1056/  "PAT A 1056: Mice and Rice (25)☆☆★"
+[17]:http://wyydsb.xin/2018/02/25/1057/  "PAT A 1057: Stack (30)★★★☆"

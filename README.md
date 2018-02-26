@@ -29,7 +29,7 @@
 >###### 15.[PAT A 1038: Recover the Smallest Number (30)][12]字符串
 >### ☆:
 >###### 16.[PAT A 1063: Set Similarity (25)][18] set
->###### 16.[PAT A 1015: Reversible Primes (20).][6] 素数，进制转换
+>###### 17.[PAT A 1015: Reversible Primes (20).][6] 素数，进制转换
 -----
 ###### updated 2/26/2018
 

@@ -3,7 +3,7 @@
 #### This are some solutions for `PAT A by iofu728`.
 
 #### The idea of the problem is in my blog: [wyydsb.xin][1]
-#### completion：60/67/135
+#### completion：63/70/135
 -----
 >#### Recent article:
 >### ★★★★☆:
@@ -28,9 +28,10 @@
 >### ☆★:
 >###### 15.[PAT A 1038: Recover the Smallest Number (30)][12]字符串
 >### ☆:
+>###### 16.[PAT A 1063: Set Similarity (25)][18] set
 >###### 16.[PAT A 1015: Reversible Primes (20).][6] 素数，进制转换
 -----
-###### updated 2/25/2018
+###### updated 2/26/2018
 
 
 
@@ -52,3 +53,4 @@
 [15]:http://wyydsb.xin/2018/02/23/1049/  "PAT A 1049: Counting Ones (30)☆☆★"
 [16]:http://wyydsb.xin/2018/02/24/1056/  "PAT A 1056: Mice and Rice (25)☆☆★"
 [17]:http://wyydsb.xin/2018/02/25/1057/  "PAT A 1057: Stack (30)★★★☆"
+[18]:http://wyydsb.xin/2018/02/26/1063/  "PAT A 1063: Set Similarity (25)☆"

@@ -31,7 +31,7 @@
 >###### 16.[PAT A 1063: Set Similarity (25)][18] set
 >###### 17.[PAT A 1015: Reversible Primes (20).][6] 素数，进制转换
 -----
-###### updated 2/26/2018
+###### updated 2/27/2018
 
 
 

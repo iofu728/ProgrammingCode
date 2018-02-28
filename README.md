@@ -36,7 +36,7 @@
 
 
 				
-[1]:http://wyydsb.xin     "乌云压顶是吧"
+[1]:http://wyydsb.xin/pat/     "乌云压顶是吧"
 [2]: http://wyydsb.xin/2018/02/11/1018/  "PAT A 1018: Public Bike Management (30)★★★★"
 [3]: http://wyydsb.xin/2018/02/10/slfx/  "排队模拟问题分析"
 [4]: http://wyydsb.xin/2018/02/10/1017/  "PAT A 1017: Queueing at Bank (25)☆☆☆"

@@ -3,7 +3,7 @@
 #### This are some solutions for `PAT A by iofu728`.
 
 #### The idea of the problem is in my blog: [wyydsb.xin][1]
-#### completion：69/76/135
+#### completion：72/79/135
 -----
 >#### Recent article:
 >### ★★★★☆:
@@ -21,19 +21,20 @@
 >###### 9.[PAT A 1056: Mice and Rice (25)][16] 模拟，晋级赛
 >###### 10.[PAT A 1049: Counting Ones (30)][15] 递归，数学问题
 >### ☆☆☆:
->###### 12.[PAT A 1066: Root of AVL Tree (25)][19] AVL,建树
->###### 13.[PAT A 1044: Shopping in Mars (25)][14] dp
->###### 14.[PAT A 1040: Longest Symmetric String (25)][13] 动态规划dp
->###### 15.[PAT A 1034: Head of a Gang (30)][11] DFS,map
->###### 16.[PAT A 1017: Queueing at Bank (25).][4] 排队，模拟
->###### 17.[PAT A 1022: Digital Library (30).][7] map,引用传参&
+>###### 12:[PAT A 1072: Gas Station (30)][21] Dijkstra
+>###### 13.[PAT A 1066: Root of AVL Tree (25)][19] AVL,建树
+>###### 14.[PAT A 1044: Shopping in Mars (25)][14] dp
+>###### 15.[PAT A 1040: Longest Symmetric String (25)][13] 动态规划dp
+>###### 16.[PAT A 1034: Head of a Gang (30)][11] DFS,map
+>###### 17.[PAT A 1017: Queueing at Bank (25).][4] 排队，模拟
+>###### 18.[PAT A 1022: Digital Library (30).][7] map,引用传参&
 >### ☆★:
->###### 18.[PAT A 1038: Recover the Smallest Number (30)][12]字符串
+>###### 19.[PAT A 1038: Recover the Smallest Number (30)][12]字符串
 >### ☆:
->###### 19.[PAT A 1063: Set Similarity (25)][18] set
->###### 20.[PAT A 1015: Reversible Primes (20).][6] 素数，进制转换
+>###### 20.[PAT A 1063: Set Similarity (25)][18] set
+>###### 21.[PAT A 1015: Reversible Primes (20).][6] 素数，进制转换
 -----
-###### updated 3/1/2018
+###### updated 3/4/2018
 
 
 
@@ -58,3 +59,4 @@
 [18]:http://wyydsb.xin/2018/02/26/1063/  "PAT A 1063: Set Similarity (25)☆"
 [19]:http://wyydsb.xin/2018/02/27/1066/  "PAT A 1066: Root of AVL Tree (25)☆☆☆"
 [20]:http://wyydsb.xin/2018/03/01/1068/  "PAT A 1068: Find More Coins (30)★★★★"
+[21]:http://wyydsb.xin/2018/03/04/1072/  "PAT A 1072: Gas Station (30)☆☆☆"

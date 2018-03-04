@@ -6,22 +6,11 @@
 using namespace std;
 const int INF=0x3fffffff;
 const int maxn=1020;
-int n,m,k,dg,maxd,mind;
-double avag;
+int n,m,k,dg,maxd,ansid;
+double avar,mind,ansdis,ansavar;
 int G[maxn][maxn],d[maxn];
 bool vis[maxn];
 
-struct node
-{
-	int mindis;
-	double id,avagd;
-	bool canServer;
-	
-};
-vector<node> v; 
-bool cmp(node a,node b){
-	return (a.canServer==b.canServer)?((a.mindis==b.mindis)?(a.id<b.id):(a.mindis>b.mindis)):(a.canServer>b.canServer);
-}
 void Dijkstra(int start){
 	fill(d,d+maxn,INF);
 	fill(vis,vis+maxn,false);
@@ -34,7 +23,7 @@ void Dijkstra(int start){
 				MIN=d[j];
 			}
 		}
-		if(u==-1) return ;
+		if(u==-1) break ;
 		vis[u]=true;
 		for(int v=1;v<=n+m;++v){
 			if(!vis[v]&&G[u][v]!=INF&&d[u]+G[u][v]<d[v]){
@@ -42,28 +31,27 @@ void Dijkstra(int start){
 			}
 		}
 	}
-	return ;
-}
-void findm(int start){
 	double sum=0,num=0;
 	mind=INF,maxd=-1;	
 	for(int i=1;i<=n;++i){
-		if(d[i]<mind&&i!=start){
+		if(d[i]>dg){
+			mind=-1;
+			return ;
+		}
+		if(d[i]<mind){
 			mind=d[i];
 		}
-		if(d[i]!=INF&&d[i]>maxd&&i!=start){
-			maxd=d[i];
-		}
 		if(d[i]!=INF){
-			sum+=d[i];
+			sum+=d[i]*1.0;
 			++num;
 		}
 //		cout<<d[i]<<' ';
 	}
 //	cout<<sum<<' '<<num<<endl;
-	avag=sum/num*1.0;
-	return ;
+	avar=sum/num*1.0;
+	return ;	
 }
+
 int stringnum(string str){
 	if(str[0]=='G'){
 		return (str[1]-'0')+n;
@@ -85,26 +73,22 @@ int main(){
 		getchar();
 	}
 	for(int i=n+1;i<=n+m;++i){
-		node temp;
 		Dijkstra(i);
-		findm(i);
-		temp.mindis=mind;
-		if(maxd>dg){
-			temp.canServer=false;
-		}else{
-			temp.canServer=true;
+		if(mind==-1) continue;
+		if(mind>ansdis){
+			ansid=i;
+			ansdis=mind;
+			ansavar=avar;
+		}else if(mind==ansdis&&avar<ansavar){
+			ansid=i;
+			ansavar=avar;
 		}
-		temp.id=i-n+1;
-		temp.avagd=avag;
-		v.push_back(temp);
-//		cout<<temp.id<<' '<<temp.mindis<<' '<<temp.avagd<<' '<<temp.canServer<<' '<<maxd<<' '<<mind<<endl;
+		
 	}
-	sort(v.begin(), v.end(),cmp);
-	if(v[0].canServer==false){
+	if(ansid==-1){
 		cout<<"No Solution\n";
 	}else{
-		cout<<'G'<<v[0].id<<endl;
-		printf("%.1d.0 %.1f\n", v[0].mindis,round(v[0].avagd*10)/10.0);
+		printf("G%d\n%.1f %.1f",ansid-n,ansdis,ansavar);
 	}
 	return 0;
 }

@@ -4,7 +4,7 @@ int main(){
 	int n,m;
 	cin>>n>>m;
 	getchar();
-	string atr=to_string(a+b);
+	string str=to_string(n+m);
 	int len=str.size();
 	for(int i=0;i<len;++i){
 		cout<<str[i];

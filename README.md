@@ -1,6 +1,6 @@
 # `PAT A by iofu728 `
 
-#### This are some solutions for `PAT A `by iofu728.
+#### This are some solutions for `PAT A ` by iofu728.
 
 #### The idea of the problem is in my blog: [wyydsb.xin][1]
 #### completion：72/79/135
@@ -65,5 +65,5 @@
 [21]:http://wyydsb.xin/pat/1072.html  "PAT A 1072: Gas Station (30)☆☆☆"
 [22]:http://wyydsb.xin/pat/anoj2018II.html#_1024-c-–-宇宙树-★★★☆ "ANOJ 2018 模拟2 C 宇宙树"
 [23]:http://wyydsb.xin/pat/anoj2018II.html#_1023-b-–-缺失数-☆☆☆  "ANOJ 2018 模拟2 B 缺失数"
-[22]:http://wyydsb.xin/pat/anoj2018II.html#_1022-a-–-库洛值-☆    "ANOJ 2018 模拟2 A 库洛值"
+[24]:http://wyydsb.xin/pat/anoj2018II.html#_1022-a-–-库洛值-☆    "ANOJ 2018 模拟2 A 库洛值"
 

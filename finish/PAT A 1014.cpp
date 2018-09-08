@@ -5,7 +5,7 @@
 using namespace std;
 struct node {
   int poptime = 0, endtime = 0, windows;
-  queue<int> q;  //´æÈë»¨·ÑÊ±¼ä
+  queue<int> q; // å­˜å…¥èŠ±è´¹æ—¶é—´
 };
 bool cmp(node a, node b) { return a.poptime < b.poptime; }
 int main() {
@@ -13,7 +13,7 @@ int main() {
   cin >> n >> m >> k >> q;
   getchar();
   vector<int> spend(k + 1), end(k + 1);
-  bool vis[k + 1] = {true};  //ÄÜ·ñ·şÎñÅĞ¶Ï
+  bool vis[k + 1] = {true}; // èƒ½å¦æœåŠ¡åˆ¤æ–­
   fill(vis, vis + k + 1, true);
   //		for(int i=1;i<=k;++i){
   //		cout<<vis[i]<<" ";
@@ -24,13 +24,13 @@ int main() {
   }
   getchar();
   vector<node> window(n);
-  //±éÀúÅÅ¶ÓÇø
+  // éå†æ’é˜ŸåŒº
   for (int i = 1; i <= m; ++i) {
     for (int j = 1; j <= n; ++j) {
       if (now <= k) {
         window[j - 1].q.push(spend[now]);
         if (window[j - 1].endtime >= 540) {
-          vis[now] = false;  //Ç°ÃæÒ»Î»½áÊøÊ±ºò³¬Ê±
+          vis[now] = false; // å‰é¢ä¸€ä½ç»“æŸæ—¶å€™è¶…æ—¶
         }
         window[j - 1].endtime += spend[now];
         if (i == 1) {
@@ -55,13 +55,14 @@ int main() {
   //		cout<<vis[i]<<" ";
   //	}
   //	cout<<endl;
-  //±éÀúµÈ´ıÇø
+  // éå†ç­‰å¾…åŒº
   while (now <= k) {
     sort(window.begin(), window.end(), cmp);
     window[0].q.pop();
     int temptime = window[0].q.front();
     window[0].poptime += temptime;
-    if (window[0].endtime >= 540) vis[now] = false;
+    if (window[0].endtime >= 540)
+      vis[now] = false;
     window[0].endtime += spend[now];
     window[0].q.push(now);
     end[now] = window[0].endtime;

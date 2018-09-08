@@ -11,7 +11,7 @@ bool cmpweight(node a, node b) { return a.weight > b.weight; }
 int main() {
   int np, ng, id;
   scanf("%d %d", &np, &ng);
-  vector<node> v(np), x, y, z;  // z±éÀúÁĞ
+  vector<node> v(np), x, y, z; // zéå†åˆ—
   for (int i = 0; i < np; ++i) {
     scanf("%d", &v[i].weight);
     v[i].idorigin = i;
@@ -23,17 +23,17 @@ int main() {
   //	for(int i=0;i<z.size();++i){
   //		cout<<z[i].idorigin<<' '<<z[i].weight<<endl;
   //	}
-  //·Ö×éÑ¡ÓÅÄ£Äâ
+  // åˆ†ç»„é€‰ä¼˜æ¨¡æ‹Ÿ
   while (z.size() > ng) {
     x.clear();
     int postrank = (z.size() - 1) / ng + 2;
     //		cout<<' '<<postrank<<endl;
-    //Ã¿×éÑ¡Ôñ
+    // æ¯ç»„é€‰æ‹©
     for (int i = 0; i < z.size(); i = i + ng) {
       vector<node> temp;
-      temp.insert(
-          temp.begin(), z.begin() + i,
-          (z.end() >= (z.begin() + i + ng)) ? (z.begin() + i + ng) : (z.end()));
+      temp.insert(temp.begin(), z.begin() + i,
+                  (z.end() >= (z.begin() + i + ng)) ? (z.begin() + i + ng)
+                                                    : (z.end()));
       sort(temp.begin(), temp.end(), cmpweight);
       x.push_back(temp[0]);
       //			cout<<"***"<<temp[0].weight<<'

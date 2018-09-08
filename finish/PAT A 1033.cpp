@@ -50,7 +50,8 @@ void margin(node temp) {
       ++flag;
     }
   }
-  if (!flag) m.push_back(temp);
+  if (!flag)
+    m.push_back(temp);
 }
 bool lowprice(node temp) {
   for (int i = 1; i < v.size(); ++i) {
@@ -142,7 +143,7 @@ int main(int argc, char const *argv[]) {
           more = 600 - tempstart;
         }
       }
-      //			cout<<v[i].start<<" "<<v[i-1].start<<"
+      // cout<<v[i].start<<" "<<v[i-1].start<<"
       //"<<spend<<endl;
     }
 

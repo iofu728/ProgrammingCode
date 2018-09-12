@@ -3,7 +3,7 @@
 #### This are some solutions for `PAT A ` by iofu728.
 
 #### The idea of the problem is in my blog: [wyydsb.xin][1]
-#### completion：72/79/135
+#### completion：90/151
 -----
 >#### Recent article:
 >### ★★★★☆:
@@ -18,26 +18,31 @@
 >###### 7.[ANOJ  1024: C – 宇宙树(25)][22] DFS
 >###### 8.[PAT A 1057: Stack (30)][17] 二分查找，二维哈希，栈模拟
 >###### 9.[PAT A 1021: Deepest Root (25).][8] 无环判断,树的深度,最深源点
+>### ★★☆:
+>###### 10.[PAT A 1082: Read Number in Chinese (25)][25] 字符串
 >### ☆☆★:
->###### 10.[PAT A 1056: Mice and Rice (25)][16] 模拟，晋级赛
->###### 11.[PAT A 1049: Counting Ones (30)][15] 递归，数学问题
+>###### 11.[PAT A 1080: Graduate Admission (30)][16] sort
+>###### 12.[PAT A 1056: Mice and Rice (25)][16] 模拟，晋级赛
+>###### 13.[PAT A 1049: Counting Ones (30)][15] 递归，数学问题
 >### ☆☆☆:
->###### 12.[ANOJ  1023: B – 缺失数(25)][23] bitMap
->###### 13:[PAT A 1072: Gas Station (30)][21] Dijkstra
->###### 14.[PAT A 1066: Root of AVL Tree (25)][19] AVL,建树
->###### 15.[PAT A 1044: Shopping in Mars (25)][14] dp
->###### 16.[PAT A 1040: Longest Symmetric String (25)][13] 动态规划dp
->###### 17.[PAT A 1034: Head of a Gang (30)][11] DFS,map
->###### 18.[PAT A 1017: Queueing at Bank (25).][4] 排队，模拟
->###### 19.[PAT A 1022: Digital Library (30).][7] map,引用传参&
+>###### 14.[ANOJ  1023: B – 缺失数(25)][23] bitMap
+>###### 15.[PAT A 1075: PAT Judge (25)][26] sort
+>###### 16.[PAT A 1076: Forwards on Weibo (25)][27] 图，BFS
+>###### 17:[PAT A 1072: Gas Station (30)][21] Dijkstra
+>###### 18.[PAT A 1066: Root of AVL Tree (25)][19] AVL,建树
+>###### 19.[PAT A 1044: Shopping in Mars (25)][14] dp
+>###### 20.[PAT A 1040: Longest Symmetric String (25)][13] 动态规划dp
+>###### 21.[PAT A 1034: Head of a Gang (30)][11] DFS,map
+>###### 22.[PAT A 1017: Queueing at Bank (25).][4] 排队，模拟
+>###### 23.[PAT A 1022: Digital Library (30).][7] map,引用传参&
 >### ☆★:
->###### 20.[PAT A 1038: Recover the Smallest Number (30)][12]字符串
+>###### 24.[PAT A 1038: Recover the Smallest Number (30)][12]字符串
 >### ☆:
->###### 21.[ANOJ  1022: A – 库洛值(20)][24] hashMap
->###### 22.[PAT A 1063: Set Similarity (25)][18] set
->###### 23.[PAT A 1015: Reversible Primes (20).][6] 素数，进制转换
+>###### 25.[ANOJ  1022: A – 库洛值(20)][24] hashMap
+>###### 26.[PAT A 1063: Set Similarity (25)][18] set
+>###### 27.[PAT A 1015: Reversible Primes (20).][6] 素数，进制转换
 -----
-###### updated 3/15/2018
+###### updated 9/12/2018
 
 
 
@@ -66,4 +71,7 @@
 [22]:http://wyydsb.xin/pat/anoj2018II.html#_1024-c-–-宇宙树-★★★☆ "ANOJ 2018 模拟2 C 宇宙树"
 [23]:http://wyydsb.xin/pat/anoj2018II.html#_1023-b-–-缺失数-☆☆☆  "ANOJ 2018 模拟2 B 缺失数"
 [24]:http://wyydsb.xin/pat/anoj2018II.html#_1022-a-–-库洛值-☆    "ANOJ 2018 模拟2 A 库洛值"
+[25]:http://wyydsb.xin/pat/1082.html  "PAT A 1082: Read Number in Chinese (25)★★☆"
+[26]:http://wyydsb.xin/pat/1075.html  "PAT A 1075: PAT Judge (25)☆☆☆"
+[27]:http://wyydsb.xin/pat/1076.html  "PAT A 1076: Forwards on Weibo (25)☆☆☆"
 

@@ -3,21 +3,21 @@
 
 using namespace std;
 
-long long gca(long long a, long long b) { return !b ? abs(a) : gca(b, a % b); }
+long long gcd(long long a, long long b) { return !b ? abs(a) : gcd(b, a % b); }
 
 int main(int argc, char const *argv[]) {
-  long long n, a, b, suma = 0, sumb = 1, gcanum;
+  long long n, a, b, suma = 0, sumb = 1, gcdnum;
   cin >> n;
   for (int i = 0; i < n; ++i) {
     scanf("%lld/%lld", &a, &b);
-    gcanum = gca(a, b);
-    a /= gcanum;
-    b /= gcanum;
+    gcdnum = gcd(a, b);
+    a /= gcdnum;
+    b /= gcdnum;
     suma = b * suma + a * sumb;
     sumb = b * sumb;
-    gcanum = gca(suma, sumb);
-    suma /= gcanum;
-    sumb /= gcanum;
+    gcdnum = gcd(suma, sumb);
+    suma /= gcdnum;
+    sumb /= gcdnum;
   }
   long long result = suma / sumb;
   suma -= result * sumb;

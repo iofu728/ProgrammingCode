@@ -2,7 +2,7 @@
  * @Author: gunjianpan
  * @Date:   2018-09-20 23:37:05
  * @Last Modified by:   gunjianpan
- * @Last Modified time: 2018-09-23 20:58:33
+ * @Last Modified time: 2018-09-28 19:23:25
  */
 #include <cmath>
 #include <iostream>
@@ -40,6 +40,8 @@ int main(int argc, char const *argv[]) {
     pre[maxindex] = pow(maxindex, p);
   std::vector<int> v;
   dfs(v, 0, maxindex - 1, 0);
+  if (!n)
+    for (int i = 0; i < k; ++i) path.push_back(0);
   if (!path.size()) {
     cout << "Impossible";
   } else {

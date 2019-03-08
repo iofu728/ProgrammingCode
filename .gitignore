@@ -1,4 +1,18 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# for all
+*
+
 .DS_Store
 
+# except
+
+!*.c
+!*.h
+!Makefile
+!*.md
+!*.cpp
+!finish
+
+# test
+*test*

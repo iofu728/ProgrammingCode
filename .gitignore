@@ -13,6 +13,11 @@
 !*.md
 !*.cpp
 !finish
+!work
+!19*
+!ANOJ
+!entrance
+!wait
 
 # test
 *test*

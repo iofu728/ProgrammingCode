@@ -1,12 +1,11 @@
 #include <algorithm>
-#include <cmath>
 #include <iostream>
 #include <string>
-#include <vector>
+
 using namespace std;
 const int INF = 0x3fffffff;
 const int maxn = 1020;
-int n, m, k, dg, maxd, ansid;
+int n, m, k, dg, ansid = -1;
 double avar, mind, ansdis, ansavar;
 int G[maxn][maxn], d[maxn];
 bool vis[maxn];
@@ -15,6 +14,8 @@ void Dijkstra(int start) {
   fill(d, d + maxn, INF);
   fill(vis, vis + maxn, false);
   d[start] = 0;
+  double sum = 0;
+  mind = INF;
   for (int i = 1; i <= n + m; ++i) {
     int u = -1, MIN = INF;
     for (int j = 1; j <= n + m; ++j) {
@@ -23,7 +24,8 @@ void Dijkstra(int start) {
         MIN = d[j];
       }
     }
-    if (u == -1) break;
+    if (u == -1)
+      break;
     vis[u] = true;
     for (int v = 1; v <= n + m; ++v) {
       if (!vis[v] && G[u][v] != INF && d[u] + G[u][v] < d[v]) {
@@ -31,8 +33,7 @@ void Dijkstra(int start) {
       }
     }
   }
-  double sum = 0, num = 0;
-  mind = INF, maxd = -1;
+
   for (int i = 1; i <= n; ++i) {
     if (d[i] > dg) {
       mind = -1;
@@ -43,21 +44,19 @@ void Dijkstra(int start) {
     }
     if (d[i] != INF) {
       sum += d[i] * 1.0;
-      ++num;
     }
-    //		cout<<d[i]<<' ';
   }
-  //	cout<<sum<<' '<<num<<endl;
-  avar = sum / num * 1.0;
+  avar = sum / n * 1.0;
   return;
 }
 
 int stringnum(string str) {
   if (str[0] == 'G') {
-    return (str[1] - '0') + n;
+    return stoi(str.substr(1)) + n;
   } else
-    return str[0] - '0';
+    return stoi(str);
 }
+
 int main() {
   cin >> n >> m >> k >> dg;
   getchar();
@@ -74,7 +73,8 @@ int main() {
   }
   for (int i = n + 1; i <= n + m; ++i) {
     Dijkstra(i);
-    if (mind == -1) continue;
+    if (mind == -1)
+      continue;
     if (mind > ansdis) {
       ansid = i;
       ansdis = mind;

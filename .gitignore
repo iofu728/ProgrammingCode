@@ -9,6 +9,7 @@
 
 !*.c
 !*.h
+!*.py
 !Makefile
 !*.md
 !*.cpp
@@ -18,6 +19,7 @@
 !ANOJ
 !entrance
 !wait
+!leetcode
 
 # test
 *test*

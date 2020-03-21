@@ -24,3 +24,4 @@ finish/*
 # test
 *test*
 .history
+.vscode

@@ -2,7 +2,7 @@
 # @Author: gunjianpan
 # @Date:   2020-09-05 23:24:43
 # @Last Modified by:   gunjianpan
-# @Last Modified time: 2020-09-06 00:13:53
+# @Last Modified time: 2020-09-07 21:57:44
 
 """
 5494. 统计所有可行路径 显示英文描述 
@@ -67,7 +67,6 @@
 0 <= start, finish < locations.length
 1 <= fuel <= 200
 """
-sys.setrecursionlimit(100000)
 
 from functools import lru_cache
 
@@ -85,7 +84,7 @@ class Solution:
                 if now == ii:
                     continue
                 cost = abs(locations[now] - loc)
-                if cost <= oil:
+                if cost + abs(locations[now] - locations[finish]) <= oil:
                     ans += dfs(ii, oil - cost)
             if now == finish:
                 ans += 1

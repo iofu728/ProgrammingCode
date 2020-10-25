@@ -9,6 +9,7 @@
 finish/*
 !*.c
 !*.h
+*.class
 !*.py
 !Makefile
 !*.md

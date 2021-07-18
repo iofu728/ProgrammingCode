@@ -2,7 +2,7 @@
 # @Author: gunjianpan
 # @Date:   2020-09-07 20:46:36
 # @Last Modified by:   gunjianpan
-# @Last Modified time: 2020-09-07 20:47:18
+# @Last Modified time: 2021-06-28 21:14:17
 
 """
 815. Bus Routes Hard
@@ -30,30 +30,23 @@ Accepted 39,483 Submissions 92,475
 
 
 class Solution:
-    def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
-        N = len(routes)
-        if S == T:
-            return 0
-        routes = list(map(set, routes))
-        g = [set() for _ in range(N)]
-        for ii, r1 in enumerate(routes):
-            for jj in range(ii + 1, N):
-                r2 = routes[jj]
-                if any([1 for kk in r2 if kk in r1]):
-                    g[ii].add(jj)
-                    g[jj].add(ii)
-        ss, tt = set(), set()
-        for ii, jj in enumerate(routes):
-            if S in jj:
-                ss.add(ii)
-            if T in jj:
-                tt.add(ii)
-        queue = [(ii, 1) for ii in ss]
-        for ii, jj in queue:
-            if ii in tt:
-                return jj
-            for kk in g[ii]:
-                if kk not in ss:
-                    ss.add(kk)
-                    queue.append((kk, jj + 1))
+    def numBusesToDestination(
+        self, routes: List[List[int]], source: int, target: int
+    ) -> int:
+        stations = defaultdict(set)
+        for bus, ss in enumerate(routes):
+            for s in ss:
+                stations[s].add(bus)
+        routes = [set(ii) for ii in routes]
+        queue = [(source, 0)]
+        buses, stops = set(), set([source])
+        while queue:
+            now, step = queue.pop(0)
+            if now == target:
+                return step
+            for bus in stations[now] - buses:
+                for s in routes[bus] - stops:
+                    buses.add(bus)
+                    stops.add(s)
+                    queue.append((s, step + 1))
         return -1

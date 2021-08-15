@@ -2,7 +2,7 @@
 # @Author: gunjianpan
 # @Date:   2020-12-21 23:43:27
 # @Last Modified by:   gunjianpan
-# @Last Modified time: 2020-12-21 23:44:06
+# @Last Modified time: 2021-07-28 00:13:13
 
 """
 863. All Nodes Distance K in Binary Tree Medium
@@ -43,35 +43,31 @@ Accepted 106,824 Submissions 186,768
 #         self.left = None
 #         self.right = None
 
-class Solution:
-    def distanceK(self, root: TreeNode, target: TreeNode, K: int) -> List[int]:
-        def dfs(now, previous):
-            if now is None or self.done is True:
-                return
-            # previous.append(now)
-            if target.val == now.val:
-                self.previous = previous + [now]
-                self.done = True
-                return
-            dfs(now.left, previous + [now])
-            dfs(now.right, previous + [now])
-        def dfs2(now, need):
-            if need < 0 or now is None:
-                return
-            if need == 0 and (now != target or K == 0):
-                self.res.append(now.val)
-                return
 
-            if now.left not in self.previous:
-                dfs2(now.left, need - 1)
-            if now.right not in self.previous:
-                dfs2(now.right, need - 1)
-            
-        self.done = False
-        self.previous = []
-        self.res = []
-        dfs(root, [])
-        for ii in range(min(K + 1, len(self.previous))):
-            # print(self.previous[-1 * (ii + 1)], K - ii)
-            dfs2(self.previous[-1 * (ii + 1)], K - ii)
-        return self.res
+class Solution:
+    def distanceK(self, root: TreeNode, target: TreeNode, k: int) -> List[int]:
+        g = defaultdict(list)
+        queue = [root]
+        while queue:
+            top = queue.pop(0)
+            if top.left:
+                g[top.val].append(top.left.val)
+                g[top.left.val].append(top.val)
+                queue.append(top.left)
+            if top.right:
+                g[top.val].append(top.right.val)
+                g[top.right.val].append(top.val)
+                queue.append(top.right)
+        queue = [(target.val, 0)]
+        res, have = [], set()
+        while queue:
+            top, h = queue.pop(0)
+            if h > k:
+                break
+            have.add(top)
+            if h == k:
+                res.append(top)
+            for ii in g[top]:
+                if ii not in have:
+                    queue.append((ii, h + 1))
+        return res

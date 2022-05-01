@@ -2,7 +2,7 @@
 # @Author: gunjianpan
 # @Date:   2022-01-16 11:33:43
 # @Last Modified by:   gunjianpan
-# @Last Modified time: 2022-01-16 11:33:54
+# @Last Modified time: 2022-04-28 11:55:17
 
 """
 5983. 同时运行 N 台电脑的最长时间 显示英文描述 
@@ -51,23 +51,18 @@ Difficulty:Hard
 1 <= n <= batteries.length <= 105
 1 <= batteries[i] <= 109
 """
+
+
 class Solution:
     def maxRunTime(self, n: int, batteries: List[int]) -> int:
-        queue = sorted([-ii for ii in batteries])
-        res = 0
-        while queue:
-            top = []
-            for _ in range(n):
-                if not queue:
-                    break
-                tmp = heapq.heappop(queue)
-                top.append(tmp * -1)
-            if len(top) < n:
-                break
-            now = min(top)
-            now = max(now // 2, 1)
-            res += now
-            for ii in top:
-                if ii - now > 0:
-                    heapq.heappush(queue, now - ii)
-        return res
+        l, r = 0, sum(batteries) // n + 1
+        while l < r:
+            mid = (l + r) // 2
+            t = 0
+            for ii in batteries:
+                t += min(ii, mid)
+            if t >= n * mid:
+                l = mid + 1
+            else:
+                r = mid
+        return l - 1

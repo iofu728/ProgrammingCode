@@ -2,7 +2,7 @@
 # @Author: gunjianpan
 # @Date:   2021-04-11 11:06:13
 # @Last Modified by:   gunjianpan
-# @Last Modified time: 2021-04-11 11:06:27
+# @Last Modified time: 2022-05-04 13:22:30
 """
 5727. 找出游戏的获胜者 显示英文描述 
 通过的用户数0
@@ -75,3 +75,11 @@ class Solution:
             nex.extend(now[remove_id + 1 :])
             return nex[0]
         return now[next_id]
+
+
+class Solution:
+    def findTheWinner(self, n: int, k: int) -> int:
+        winner = 1
+        for i in range(2, n + 1):
+            winner = (k + winner - 1) % i + 1
+        return winner

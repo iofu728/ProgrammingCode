@@ -603,3 +603,14 @@ DECREASE-KEY的实际代价为O(c) (级联切断操作，c次调用CASCADING-CUT
 19.5 根据引理19.4，得n>=size(x)>=\phi^k, 得 k<= lg_\phi n=>最大度数D(n)为O(lgn)
 
 
+20230821 1
+若 k == x.key 不操作, 若 k < x.key 则运行key减值操作，时间复杂度O(1)。 如果 k > x.key，则删除再插入新值，复杂度为O(lgn)。
+
+20230823 1
+叠加一颗度为\sqrt(n)的树，高度为2，每个节点存储的是其子树的逻辑或。
+使用summary数组可以在O(\sqrt(n))的时间内实现minimum，maximum，successor，predecessor和delete操作。
+
+20230825 1
+每次递归以平方根大小缩减全域，直至项数大小为2。
+考虑到目标时间复杂度为O(lglgu)。
+而T(u) = T(\sqrt{u}) + O(1), 则递归到下一层次前，在每一层耗费常数时间。

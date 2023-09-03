@@ -614,3 +614,17 @@ DECREASE-KEY的实际代价为O(c) (级联切断操作，c次调用CASCADING-CUT
 每次递归以平方根大小缩减全域，直至项数大小为2。
 考虑到目标时间复杂度为O(lglgu)。
 而T(u) = T(\sqrt{u}) + O(1), 则递归到下一层次前，在每一层耗费常数时间。
+
+20230828 1
+1. 若 V.u == 2，则直接查找对应位是否为1。
+2. 否则将查询值 x 分解为两部分：高位部分 x_high 和低位部分 x_low。其中 x_high = x // sqrt(u)，x_low = x % sqrt(u)。
+递归查询 x_high 和 x_low。若summary 中不存在 x_high，则说明 x 也不在集合中。如果 summary 中存在 x_high，那么继续在 cluster[x_high] 中查找 x_low。如果 cluster[x_high] 中存在 x_low，则 x 存在于集合中；否则不存在。
+
+20230830 1
+if V.u == 2, 则将A数组A中x位设为1，
+否则递归将x插入对应簇中。
+最坏情况，做2次递归调用，则运行时间T(u) = 2T(\sqrt{n}) + O(1) => O(lgu)
+
+20230901 1
+在delete的else分支中检查n是否为1，若为1则将summary位设为0，将表中指针清空，并直接return。
+否则和之前相同。最坏复杂度不改变，最好复杂度可节省至lglgn

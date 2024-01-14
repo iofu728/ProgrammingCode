@@ -901,3 +901,21 @@ T∞(n) =  max(T∞(n - 1), T∞(n - 2)) + O(1)
 T11=A12B21, 同理生成T12, T21, T22
 此后进行同步
 
+20240104 27.2-5
+
+P-MATRIX-TRANSPOSE(A)
+    n = A.rows
+    if n == 1
+        return
+    partition A into n/2 ✕ n/2 submatrices A11, A12, A21, A22
+    spawn P-MATRIX-TRANSPOSE(A11)
+    spawn P-MATRIX-TRANSPOSE(A12)
+    spawn P-MATRIX-TRANSPOSE(A21)
+    P-MATRIX-TRANSPOSE(A22)
+    sync
+    parallel for i = 1 to n/2
+        parallel for j = 1 + n/2 to n
+            exchange A[i, j] with A[i + n/2, j - n/2]
+Parallel Time: O(log^2 n)
+Total Time: O(n^2lgn)
+

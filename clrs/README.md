@@ -1034,3 +1034,21 @@ x1 - x2 + x4 <= 7
 -3x1 + 3x2 - x3 <= -24
 x1, x2, x3, x4 >= 0
 
+20240222
+29.2-4
+max fsv1 + fsv2
+sub. fsv1 <= 16
+fsv2 <= 14
+fv1v3 <= 12
+fv2v1 <= 4
+fv2v4 <= 14
+fv3v2 <= 9
+fv3t <= 20
+fv4v3 <= 7
+fv4t <= 4
+fsv1 + fv2v1 = fv1v3
+fsv2 + fv3v2 = fv2v1 + fv2v4
+fv1v3 + fv4v3 = fv3v2 + fv3t
+fv2v4 = fv4v3 + fv4t
+fuv >= 0, u,v in {s, v1, v2, v3, v4, t}
+
